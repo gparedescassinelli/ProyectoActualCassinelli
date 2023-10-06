@@ -1,0 +1,117 @@
+<section class="contactUs" id="contactanos">
+  <div
+    class="contactUs__container container"
+    data-aos="fade-left"
+    data-aos-offset="350"
+    data-aos-easing="ease-in-sine"
+  >
+    <div class="contactUs__data">
+      <h2 class="contactUs__title">Contáctanos</h2>
+      <form
+        action=""
+        class="contactUs__form"
+        (ngSubmit)="contactUs()"
+        [formGroup]="formulario"
+      >
+        <div class="contactUs__inputs">
+          <input
+            class="contactUs__input"
+            type="text"
+            placeholder="Nombre y apellidos*"
+            formControlName="name"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              formulario.controls['name'].errors &&
+              formulario.controls['name'].touched
+            "
+            >Campo Obligatorio</span
+          >
+          <input
+            class="contactUs__input"
+            type="number"
+            placeholder="Teléfono*"
+            formControlName="phone"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              formulario.controls['phone'].errors &&
+              formulario.controls['phone'].touched
+            "
+            >Campo Obligatorio</span
+          >
+          <input
+            class="contactUs__input"
+            type="email"
+            placeholder="Correo*"
+            formControlName="email"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              formulario.controls['email'].errors &&
+              formulario.controls['email'].touched
+            "
+            >Campo Obligatorio</span
+          >
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="contactUs__input contactUs__input--textarea"
+            placeholder="Mensaje*"
+            formControlName="message"
+          ></textarea>
+          <span
+            class="text-danger"
+            *ngIf="
+              formulario.controls['message'].errors &&
+              formulario.controls['message'].touched
+            "
+            >Campo Obligatorio</span
+          >
+          <div>
+            <input type="checkbox" class="me-1" formControlName="terms" />Acepto
+            términos y condiciones
+          </div>
+          <div
+            *ngIf="
+              formulario.controls['terms'].errors &&
+              formulario.controls['terms'].touched
+            "
+          >
+            <span class="text-danger">Campo Obligatorio</span>
+          </div>
+          <button type="submit" class="contactUs__btn">Enviar</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="contactUs__info">
+      <p>
+        Con más de 60 años en el mercado, Cassinelli se consolida como el líder
+        y experto en la categoría de acabados para la construcción de tu hogar.
+        <br /><br />
+        Nuestra misión es contribuir con el desarrollo de la calidad de vida de
+        millones de familias en el Perú, por ello brindamos soluciones
+        funcionales, estéticas y eco eﬁcientes en revestimientos cerámicos,
+        sanitarios y griferías, accesorios para baño, cocinas y más.
+        <br /><br />
+        <b
+          >Nuestra amplia trayectoria está respaldada por el grupo Celima -
+          Trebol, corporación peruana de la cual formamos parte.</b
+        >
+      </p>
+    </div>
+  </div>
+
+  <a
+    href="https://drive.google.com/file/d/1MUMVShi3gKhaX1hL-gUEojJ0pwCncdIY/view"
+    class="contactUs__btn--brochure"
+    target="_blank"
+    > <i class="bx bx-down-arrow-alt"></i
+      >Descarga Brochure</a>
+</section>

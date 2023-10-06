@@ -1,0 +1,19 @@
+<section class="principalesMarcas" id="principalesMarcas">
+  <div class="principalesMarcas__container container">
+    <h2 class="ourClients__title mb-5">Principales Marcas</h2>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+      (init)="slickInit($event)"
+      (breakpoint)="breakpoint($event)"
+      (afterChange)="afterChange($event)"
+      (beforeChange)="beforeChange($event)"
+    >
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <img src="{{ slide.img }}" alt=""  class="principalesMarcas__img"/>
+      </div>
+    </ngx-slick-carousel>
+<a href="https://drive.google.com/file/d/1MUMVShi3gKhaX1hL-gUEojJ0pwCncdIY/view" class="principalesMarcas__btn" target="_blank">Descarga Brochure <i class='bx bx-down-arrow-alt'></i></a>
+  </div>
+</section>

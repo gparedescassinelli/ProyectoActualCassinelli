@@ -1,0 +1,22 @@
+<section class="ourClients" id="clientes" >
+    <div class="ourClients__container container" >
+        <h2 class="ourClients__title mb-5">Nuestros clientes</h2>
+
+        <ngx-slick-carousel
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="slideConfig"
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)"
+      >
+        <div ngxSlickItem *ngFor="let slide of slides" class="">
+          <img src="{{ slide.img }}" alt=""  class="ourClients__img"/>
+        </div>
+      </ngx-slick-carousel>
+        <!-- <figure class="ourClients__figure">
+            <img src="../../../assets/logosoriginales.jpeg" alt="proyecta clientes" class="ourClients__img">
+        </figure> -->
+    </div>
+</section>

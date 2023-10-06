@@ -1,0 +1,55 @@
+<header class="header">
+  <nav class="container header__menu">
+    <figure class="header__figure">
+      <img
+        loading="lazy"
+        src="../../../assets/Proyecta-icon.svg"
+        alt="logo proyecta"
+        class="header__img"
+      />
+    </figure>
+    <div
+      class="header__linksAndFooter"
+      [ngClass]="
+        boton ? 'header__linksAndFooter' : 'header__linksAndFooter open'
+      "
+    >
+      <ul class="header__links">
+        <li><a class="header__link" href="#nosotros"  (click)="changeIcon()">Nosotros</a></li>
+        <li><a class="header__link" href="#principalesMarcas"  (click)="changeIcon()">Principales Marcas</a></li>
+        <li><a class="header__link" href="#clientes"  (click)="changeIcon()">Clientes</a></li>
+        <li>
+          <a class="header__link header__link-border" href="#contactanos"  (click)="changeIcon()">Contáctanos</a>
+        </li>
+      </ul>
+      <div class="header__footer">
+        <div>
+          <div class="header__dato">
+            <i class="bx bx-map"></i>
+            <p>Av. República de Panamá 4495, Surquillo.</p>
+          </div>
+  
+          <div class="header__dato">
+            <i class="bx bxs-phone-call"></i>
+            <p>01 613-7979</p>
+          </div>
+          <div class="header__dato">
+            <i class="bx bxs-envelope"></i>
+            <p>contactoproyecta@cassinelli.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <i
+      [ngClass]="boton ? 'bx bx-menu header__close' : 'bx bx-x header__close'"
+      (click)="changeIcon()"
+    ></i>
+    
+  </nav>
+</header>
+
+<!--  <li class="nav-item">
+          <a class="nav-link active navbar-link" aria-current="page" [routerLink]="['/quienes-somos']"> Quiénes somos</a>
+         
+        </li> -->
